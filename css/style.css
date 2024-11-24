@@ -400,6 +400,7 @@ body::after {
   content: "";
   width: 20px;
   height: 20px;
+  margin-inline: 10px;
   background: url(../img/icons/beard_icon.webp) center/100% no-repeat
 }
 .header__container {
