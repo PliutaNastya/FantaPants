@@ -655,8 +655,7 @@ body::after {
   transform: translate(-50%,-50%)
 }
 .cursor {
-  width: 50px;
-  height: 50px;
+  aspect-ratio: 1;
   background-image: url(../img/game/sunscreen.webp);
   background-size: cover;
   position: absolute;
@@ -811,6 +810,9 @@ body::after {
   .about-sam__content {
     gap: 2.5rem
   }
+  .cursor {
+    width: 3.125rem
+  }
   .famous__title:not(:last-child) {
     -webkit-margin-after: 1.875rem;
     margin-block-end: 1.875rem
@@ -837,7 +839,7 @@ body::after {
     inset-inline-start: 100%;
     inset-block-start: 0;
     inline-size: 100%;
-    block-size: 100vh;
+    block-size: 100%;
     z-index: 5;
     overflow: auto;
     padding: 150px 15px 30px 15px;
@@ -990,6 +992,9 @@ body::after {
   .about-sam__content {
     gap: .9375rem
   }
+  .cursor {
+    width: 1.875rem
+  }
   .famous__title:not(:last-child) {
     -webkit-margin-after: .9375rem;
     margin-block-end: .9375rem
@@ -1103,6 +1108,9 @@ body::after {
   }
   .about-sam__content {
     gap: clamp(.9375rem ,.3693181818rem + 2.8409090909vw ,2.5rem)
+  }
+  .cursor {
+    width: clamp(1.875rem ,1.4204545455rem + 2.2727272727vw ,3.125rem)
   }
   .famous__title:not(:last-child) {
     -webkit-margin-after: clamp(.9375rem ,.5965909091rem + 1.7045454545vw ,1.875rem);

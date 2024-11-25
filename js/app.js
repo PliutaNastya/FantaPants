@@ -207,6 +207,13 @@
         updateSlide(currentSlide);
     }));
     updateSlide(currentSlide);
+    const burgerMenu = document.querySelector(".icon-menu");
+    burgerMenu.addEventListener("click", (() => {
+        cursor.style.display = "none";
+    }));
+    document.addEventListener("click", (e => {
+        if (!e.target.closest(".menu")) cursor.style.display = "block";
+    }));
     window["FLS"] = true;
     headerScroll();
 })();
