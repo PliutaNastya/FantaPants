@@ -237,6 +237,31 @@
     document.addEventListener("click", (e => {
         if (!e.target.closest(".menu")) cursor.style.display = "block";
     }));
+    document.getElementById("story-form");
+    const generateButton = document.getElementById("generate-story");
+    const storyPreview = document.getElementById("story-preview");
+    const storyText = document.getElementById("story-text");
+    const storyPhoto = document.getElementById("story-photo");
+    generateButton.addEventListener("click", (() => {
+        const answer1 = document.getElementById("question1").value.trim();
+        const answer2 = document.getElementById("question2").value.trim();
+        const answer3 = document.getElementById("question3").value.trim();
+        const photo = document.getElementById("photo").files[0];
+        if (!answer1 || !answer2 || !answer3) {
+            alert("Please fill out all fields before generating your story!");
+            return;
+        }
+        const story = `\n\t\tWhen I first realized I was a FantaPant, it happened when ${answer1}.\n\t\tPeople used to say, "${answer2}," but now I understand that being a FantaPant is not just about words, it's a way of life.\n\t\tI feel ${answer3} every day and take pride in my uniqueness!\n\t`;
+        storyText.textContent = story;
+        if (photo) {
+            const reader = new FileReader;
+            reader.onload = event => {
+                storyPhoto.innerHTML = `<img src="${event.target.result}" alt="FantaPant Photo" style="max-width: 100%; border-radius: 8px;">`;
+            };
+            reader.readAsDataURL(photo);
+        } else storyPhoto.innerHTML = "";
+        storyPreview.style.display = "block";
+    }));
     window["FLS"] = true;
     headerScroll();
 })();

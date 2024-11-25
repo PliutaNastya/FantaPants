@@ -5,7 +5,7 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20241125201218">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241125231316">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -171,6 +171,36 @@
 					</div>
 				</div>
 			</section>
+			<section class="page__story-generator story-generator">
+				<div class="story-generator__container">
+					<h3 class="story-generator__title title">Story Generator</h3>
+					<p class="story-generator__text text">Tell the world your story from woes to wins….what’s is it actually like growing up Fanta. </p>
+					<form id="story-form" class="story-generator__form form">
+						<div class="form__group">
+							<label for="question1" class="form__label">When did you first realize you were a FantaPant?</label>
+							<input type="text" id="question1" placeholder="Answer here..." class="form__input">
+						</div>
+						<div class="form__group">
+							<label for="question2" class="form__label">What's the strangest thing people have said about your FantaPant status?</label>
+							<input type="text" id="question2" placeholder="Answer here..." class="form__input">
+						</div>
+						<div class="form__group">
+							<label for="question3" class="form__label">How do you feel about being a FantaPant?</label>
+							<input type="text" id="question3" placeholder="Answer here..." class="form__input">
+						</div>
+						<div class="form__group">
+							<label for="photo" class="form__upload-label">Upload your FantaPant photo</label>
+							<input type="file" id="photo" accept="image/*" class="form__upload">
+						</div>
+						<button type="button" id="generate-story" class="form__button button">Generate Story</button>
+					</form>
+					<div id="story-preview" style="display:none;">
+						<h4>Your Story:</h4>
+						<p id="story-text"></p>
+						<div id="story-photo"></div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<!-- Footer Section -->
 		<footer class="footer">
@@ -221,7 +251,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241125201218"></script>
+	<script src="js/app.min.js?_v=20241125231316"></script>
 </body>
 
 </html>

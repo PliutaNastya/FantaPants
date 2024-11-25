@@ -79,6 +79,7 @@ body::before {
   content: "";
   position: fixed;
   aspect-ratio: 1;
+  z-index: -1;
   background: rgba(255,255,255,.1);
   border-radius: 50%;
   -webkit-animation: move 10s infinite;
@@ -754,6 +755,110 @@ body::after {
   color: #fff;
   text-align: center
 }
+.story-generator__container {
+  max-width: 700px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column
+}
+.story-generator__text {
+  text-align: center
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(183,0,0,.7) inset
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px
+}
+.form__label {
+  color: #ff5722
+}
+.form__input {
+  padding: 10px;
+  border: 3px solid #ff5722;
+  border-radius: 8px;
+  outline: 0;
+  color: #00595c
+}
+.form__input:focus-visible {
+  border: 3px solid #ff9e80
+}
+.form__input::-webkit-input-placeholder {
+  color: #00595c
+}
+.form__input:-ms-input-placeholder {
+  color: #00595c
+}
+.form__input::-ms-input-placeholder {
+  color: #00595c
+}
+.form__input::placeholder {
+  color: #00595c
+}
+.form__upload-label {
+  display: inline-flex;
+  align-items: center;
+  max-width: 350px;
+  padding: 15px 30px;
+  color: #ff5722;
+  border-radius: 50px;
+  border: 3px solid #ff5722;
+  text-align: center;
+  transition: border-color .3s
+}
+.form__upload-label::before {
+  content: "";
+  width: 30px;
+  aspect-ratio: 1;
+  -webkit-margin-end: 10px;
+  margin-inline-end: 10px;
+  background: url(../img/icons/upload_icon.svg) center/contain no-repeat
+}
+.form__upload-label:focus-visible {
+  border: 3px solid #ff9e80
+}
+.form__upload {
+  display: none
+}
+.form__button {
+  max-width: 300px;
+  margin-inline: auto;
+  outline: 0
+}
+.form__button:focus-visible {
+  border: 3px solid #ff9e80
+}
+#story-preview {
+  text-align: center
+}
+#story-preview h4:not(:last-child) {
+  -webkit-margin-after: 15px;
+  margin-block-end: 15px
+}
+#story-preview h4 p {
+  -webkit-margin-after: 15px;
+  margin-block-end: 15px
+}
+#story-photo {
+  margin-inline: auto;
+  max-width: 300px;
+  width: 100%;
+  aspect-ratio: 300/400
+}
+#story-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
 @media (min-width:37.49875em) {
   .side-block {
     flex: 0 1 200px;
@@ -813,6 +918,9 @@ body::after {
   .page__did-you-know {
     padding-block: 4.375rem
   }
+  .page__story-generator {
+    padding-block: 4.375rem
+  }
   .hero__title {
     font-size: 3rem
   }
@@ -863,6 +971,12 @@ body::after {
   }
   .did-you-know__facts {
     gap: 1.25rem
+  }
+  .story-generator__container {
+    row-gap: 1.875rem
+  }
+  #story-preview h4 {
+    font-size: 2.125rem
   }
 }
 @media (max-width:992.98px) {
@@ -994,6 +1108,9 @@ body::after {
   .page__did-you-know {
     padding-block: 2.5rem
   }
+  .page__story-generator {
+    padding-block: 2.5rem
+  }
   .hero__title {
     font-size: 1.875rem
   }
@@ -1044,6 +1161,12 @@ body::after {
   }
   .did-you-know__facts {
     gap: .9375rem
+  }
+  .story-generator__container {
+    row-gap: .9375rem
+  }
+  #story-preview h4 {
+    font-size: 1.125rem
   }
 }
 @media (max-width:68.75em) {
@@ -1107,6 +1230,9 @@ body::after {
   .page__did-you-know {
     padding-block: clamp(2.5rem ,1.8181818182rem + 3.4090909091vw ,4.375rem)
   }
+  .page__story-generator {
+    padding-block: clamp(2.5rem ,1.8181818182rem + 3.4090909091vw ,4.375rem)
+  }
   .hero__title {
     font-size: clamp(1.875rem ,1.4659090909rem + 2.0454545455vw ,3rem)
   }
@@ -1158,6 +1284,12 @@ body::after {
   .did-you-know__facts {
     gap: clamp(.9375rem ,.8238636364rem + .5681818182vw ,1.25rem)
   }
+  .story-generator__container {
+    row-gap: clamp(.9375rem ,.5965909091rem + 1.7045454545vw ,1.875rem)
+  }
+  #story-preview h4 {
+    font-size: clamp(1.125rem ,.7613636364rem + 1.8181818182vw ,2.125rem)
+  }
 }
 @media (min-width:68.75em)and (max-width:75em) {
   .menu__list {
@@ -1181,5 +1313,8 @@ body::after {
   .footer__social-media svg:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1)
+  }
+  .form__upload-label:hover {
+    border-color: #ff9e80
   }
 }
