@@ -97,7 +97,7 @@
     startButton.style.padding = "10px 20px";
     startButton.style.fontSize = "18px";
     startButton.style.cursor = "pointer";
-    startButton.style.display = "none";
+    startButton.style.display = "block";
     container.appendChild(startButton);
     function updateTimer() {
         timeLeft--;
@@ -111,8 +111,8 @@
         clearInterval(timerInterval);
     }
     function moveCharacter() {
-        const x = Math.random() * (window.innerWidth - 80);
-        const y = Math.random() * (window.innerHeight - 80);
+        const x = Math.random() * (container.offsetWidth - 80);
+        const y = Math.random() * (container.offsetHeight - 80);
         character.style.left = `${x}px`;
         character.style.top = `${y}px`;
     }
@@ -127,7 +127,7 @@
         }), 1e3);
     }
     function resetCharacter() {
-        character.style.backgroundImage = "url('../img/game/redhead.png')";
+        character.style.backgroundImage = "url('./img/game/redhead.webp')";
         moveCharacter();
     }
     function catchCharacter(e) {
@@ -135,7 +135,7 @@
         const cursorRect = cursor.getBoundingClientRect();
         const charRect = character.getBoundingClientRect();
         if (cursorRect.right > charRect.left && cursorRect.left < charRect.right && cursorRect.bottom > charRect.top && cursorRect.top < charRect.bottom) {
-            character.style.backgroundImage = "url('../img/game/redhead_sunscreen.png')";
+            character.style.backgroundImage = "url('./img/game/redhead_sunscreen.webp')";
             timeLeft += 2;
             timerDisplay.textContent = `Time: ${timeLeft}`;
             setTimeout(resetCharacter, 500);
@@ -169,7 +169,6 @@
         moveInterval = setInterval(moveCharacter, 500);
     }
     startButton.addEventListener("click", initGame);
-    startButton.style.display = "block";
     const slides = [ {
         image: "img/famous/prince_harry.webp",
         leftText: "Royalty with a rebellious twist",
