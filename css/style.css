@@ -77,7 +77,7 @@ body {
 body::after,
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   aspect-ratio: 1;
   background: rgba(255,255,255,.1);
   border-radius: 50%;
@@ -202,7 +202,9 @@ body::after {
   background-color: #ff4500;
   border: 3px solid #fff;
   box-shadow: 0 0 5px rgba(255,255,255,.3);
+  padding: 30px 20px;
   border-radius: 10px;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -210,12 +212,33 @@ body::after {
   row-gap: 10px
 }
 .side-block h3 {
+  font-family: "Patrick Hand",sans-serif;
   font-size: 1.5rem;
   margin-bottom: 10px
 }
 .side-block blockquote {
-  font-style: italic;
-  margin: 10px 0
+  font-style: italic
+}
+.right {
+  position: relative
+}
+.right::after,
+.right::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: url(../img/icons/quote.svg) 0 0/contain no-repeat
+}
+.right::before {
+  top: 10px;
+  left: 10px;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg)
+}
+.right::after {
+  bottom: 10px;
+  right: 10px
 }
 .main-slide img {
   max-width: 300px;
@@ -538,6 +561,10 @@ body::after {
   align-items: center;
   flex-direction: column
 }
+.hero__action:not(:last-child) {
+  -webkit-margin-after: 30px;
+  margin-block-end: 30px
+}
 .hero__join-us {
   display: flex;
   align-items: center;
@@ -564,7 +591,9 @@ body::after {
 }
 .hero__body {
   display: flex;
-  align-items: center
+  align-items: center;
+  max-width: 900px;
+  margin-inline: auto
 }
 .about-sam__content {
   text-align: center;
@@ -579,9 +608,9 @@ body::after {
 .about-sam__card {
   -webkit-perspective: 1000px;
   perspective: 1000px;
-  flex: 0 0 34%;
-  width: 100%;
   aspect-ratio: 1;
+  max-width: 290px;
+  width: 100%;
   cursor: pointer;
   -webkit-animation: flip-card 3s infinite linear;
   animation: flip-card 3s infinite linear
@@ -629,12 +658,10 @@ body::after {
   width: 100vw;
   height: 100vh;
   background-color: #87ceeb;
-  position: relative;
-  cursor: none
+  position: relative
 }
 #sun {
-  width: 100px;
-  height: 100px;
+  aspect-ratio: 1;
   background-color: #ff0;
   border-radius: 50%;
   position: absolute;
@@ -643,10 +670,10 @@ body::after {
   box-shadow: 0 0 50px 10px #ff0
 }
 #character {
-  width: 80px;
-  height: 80px;
+  aspect-ratio: 1;
   background-image: url(../img/game/redhead.webp);
   background-size: cover;
+  background-position: center;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -656,6 +683,7 @@ body::after {
 }
 .cursor {
   aspect-ratio: 1;
+  z-index: 100;
   background-image: url(../img/game/sunscreen.webp);
   background-size: cover;
   position: absolute;
@@ -737,6 +765,11 @@ body::after {
     flex: 0 1 225px
   }
 }
+@media (min-width:47.99875em) {
+  .about-sam__card {
+    max-width: 350px
+  }
+}
 @media (min-width:75em) {
   body::after,
   body::before {
@@ -754,9 +787,6 @@ body::after {
   .slider-container:not(:last-child) {
     -webkit-margin-after: 2.5rem;
     margin-block-end: 2.5rem
-  }
-  .side-block {
-    padding: 1.25rem
   }
   .menu__list {
     -webkit-column-gap: 3.125rem;
@@ -800,15 +830,17 @@ body::after {
   .hero__action {
     row-gap: 1.25rem
   }
-  .hero__action:not(:last-child) {
-    -webkit-margin-after: 1.875rem;
-    margin-block-end: 1.875rem
-  }
   .hero__body {
-    gap: 6.25rem
+    gap: 3.125rem
   }
   .about-sam__content {
     gap: 2.5rem
+  }
+  #sun {
+    width: 6.25rem
+  }
+  #character {
+    width: 9.375rem
   }
   .cursor {
     width: 3.125rem
@@ -942,9 +974,6 @@ body::after {
     -webkit-margin-after: .9375rem;
     margin-block-end: .9375rem
   }
-  .side-block {
-    padding: .625rem
-  }
   .footer {
     padding-block: 1.25rem
   }
@@ -982,15 +1011,17 @@ body::after {
   .hero__action {
     row-gap: .9375rem
   }
-  .hero__action:not(:last-child) {
-    -webkit-margin-after: .9375rem;
-    margin-block-end: .9375rem
-  }
   .hero__body {
-    gap: 1.25rem
+    gap: 1.875rem
   }
   .about-sam__content {
     gap: .9375rem
+  }
+  #sun {
+    width: 4.375rem
+  }
+  #character {
+    width: 5rem
   }
   .cursor {
     width: 1.875rem
@@ -1024,10 +1055,7 @@ body::after {
 }
 @media (max-width:47.99875em) {
   .hero__body {
-    flex-direction: column
-  }
-  .about-sam__card {
-    flex-basis: 70%
+    flex-direction: column-reverse
   }
 }
 @media (max-width:41.31125em) {
@@ -1058,9 +1086,6 @@ body::after {
   .slider-container:not(:last-child) {
     -webkit-margin-after: clamp(.9375rem ,.3693181818rem + 2.8409090909vw ,2.5rem);
     margin-block-end: clamp(.9375rem ,.3693181818rem + 2.8409090909vw ,2.5rem)
-  }
-  .side-block {
-    padding: clamp(.625rem ,.3977272727rem + 1.1363636364vw ,1.25rem)
   }
   .footer {
     padding-block: clamp(1.25rem ,.5681818182rem + 3.4090909091vw ,3.125rem)
@@ -1099,15 +1124,17 @@ body::after {
   .hero__action {
     row-gap: clamp(.9375rem ,.8238636364rem + .5681818182vw ,1.25rem)
   }
-  .hero__action:not(:last-child) {
-    -webkit-margin-after: clamp(.9375rem ,.5965909091rem + 1.7045454545vw ,1.875rem);
-    margin-block-end: clamp(.9375rem ,.5965909091rem + 1.7045454545vw ,1.875rem)
-  }
   .hero__body {
-    gap: clamp(1.25rem ,-.5681818182rem + 9.0909090909vw ,6.25rem)
+    gap: clamp(1.875rem ,1.4204545455rem + 2.2727272727vw ,3.125rem)
   }
   .about-sam__content {
     gap: clamp(.9375rem ,.3693181818rem + 2.8409090909vw ,2.5rem)
+  }
+  #sun {
+    width: clamp(4.375rem ,3.6931818182rem + 3.4090909091vw ,6.25rem)
+  }
+  #character {
+    width: clamp(5rem ,3.4090909091rem + 7.9545454545vw ,9.375rem)
   }
   .cursor {
     width: clamp(1.875rem ,1.4204545455rem + 2.2727272727vw ,3.125rem)

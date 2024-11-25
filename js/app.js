@@ -74,7 +74,6 @@
     timerDisplay.style.right = "10%";
     timerDisplay.style.fontSize = "24px";
     timerDisplay.style.color = "#fff";
-    timerDisplay.style.fontFamily = "Arial, sans-serif";
     timerDisplay.textContent = `Time: ${timeLeft}`;
     container.appendChild(timerDisplay);
     const gameOverMessage = document.createElement("div");
@@ -83,8 +82,7 @@
     gameOverMessage.style.left = "50%";
     gameOverMessage.style.transform = "translate(-50%, -50%)";
     gameOverMessage.style.fontSize = "36px";
-    gameOverMessage.style.color = "#fff";
-    gameOverMessage.style.fontFamily = "Arial, sans-serif";
+    gameOverMessage.style.textAlign = "center";
     gameOverMessage.style.display = "none";
     gameOverMessage.textContent = "Game Over";
     container.appendChild(gameOverMessage);
@@ -95,7 +93,8 @@
     startButton.style.left = "50%";
     startButton.style.transform = "translate(-50%, -50%)";
     startButton.style.padding = "10px 20px";
-    startButton.style.fontSize = "18px";
+    startButton.style.textAlign = "center";
+    startButton.style.fontSize = "36px";
     startButton.style.cursor = "pointer";
     startButton.style.display = "block";
     container.appendChild(startButton);
@@ -126,20 +125,40 @@
             startButton.style.display = "block";
         }), 1e3);
     }
-    function resetCharacter() {
-        character.style.backgroundImage = "url('./img/game/redhead.webp')";
-        moveCharacter();
+    function createSplash(x, y) {
+        const rect = container.getBoundingClientRect();
+        const offsetX = x - rect.left;
+        const offsetY = y - rect.top;
+        console.log(`Splash created at: (${offsetX}, ${offsetY})`);
+        const splash = document.createElement("div");
+        splash.style.position = "absolute";
+        splash.style.width = "50px";
+        splash.style.height = "50px";
+        splash.style.backgroundImage = "url('./img/game/splash.webp')";
+        splash.style.backgroundSize = "contain";
+        splash.style.backgroundRepeat = "no-repeat";
+        splash.style.borderRadius = "50%";
+        splash.style.pointerEvents = "none";
+        splash.style.left = `${offsetX - 25}px`;
+        splash.style.top = `${offsetY - 25}px`;
+        splash.style.zIndex = "9999";
+        container.appendChild(splash);
+        setTimeout((() => {
+            console.log("Splash removed");
+            splash.remove();
+        }), 1e3);
     }
+    document.addEventListener("mousedown", (e => {
+        const rect = container.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const offsetY = e.clientY - rect.top;
+        console.log(`Mouse down at: (${e.clientX}, ${e.clientY})`);
+        console.log(`Relative to container: (${offsetX}, ${offsetY})`);
+        createSplash(offsetX, offsetY);
+    }));
     function catchCharacter(e) {
         if (e.type === "mousedown" && e.button !== 0) return;
-        const cursorRect = cursor.getBoundingClientRect();
-        const charRect = character.getBoundingClientRect();
-        if (cursorRect.right > charRect.left && cursorRect.left < charRect.right && cursorRect.bottom > charRect.top && cursorRect.top < charRect.bottom) {
-            character.style.backgroundImage = "url('./img/game/redhead_sunscreen.webp')";
-            timeLeft += 2;
-            timerDisplay.textContent = `Time: ${timeLeft}`;
-            setTimeout(resetCharacter, 500);
-        }
+        createSplash(e.pageX, e.pageY);
     }
     document.addEventListener("mousemove", (e => {
         cursor.style.left = `${e.pageX}px`;
@@ -156,7 +175,12 @@
         const touchY = touch.pageY;
         cursor.style.left = `${touchX}px`;
         cursor.style.top = `${touchY}px`;
-        catchCharacter(e);
+        createSplash(touchX, touchY);
+    }));
+    character.addEventListener("click", (() => {
+        timeLeft += 2;
+        timerDisplay.textContent = `Time: ${timeLeft}`;
+        moveCharacter();
     }));
     function initGame() {
         timeLeft = 20;
@@ -172,17 +196,17 @@
     const slides = [ {
         image: "img/famous/prince_harry.webp",
         leftText: "Royalty with a rebellious twist",
-        leftAuthor: "- Prince Harry",
+        leftAuthor: "Prince Harry",
         rightQuote: "You, of course, know that it’s hard being a redhead."
     }, {
         image: "img/famous/lucille_ball.webp",
         leftText: "Icon of comedy and style.",
-        leftAuthor: "- Lucille Ball",
+        leftAuthor: "Lucille Ball",
         rightQuote: "Once in his life, every man is entitled to fall madly in love with a gorgeous redhead."
     }, {
         image: "img/famous/ed_sheeran.webp",
         leftText: "Singing his way through life with fiery locks",
-        leftAuthor: "- Ed Sheeran",
+        leftAuthor: "Ed Sheeran",
         rightQuote: "Being ginger is just a sign that you’re awesome."
     } ];
     let currentSlide = 0;
