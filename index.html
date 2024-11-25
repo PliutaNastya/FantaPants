@@ -5,7 +5,7 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20241124231529">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241125161922">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -39,18 +39,16 @@
 		<main class="page">
 			<section class="page__hero hero">
 				<div class="hero__container">
+					<h1 class="hero__title title"><span>#FantaPants – Embrace the Fizz</span></h1>
 					<p class="hero__intro-text">For too long, we've sat in the shade (literally) too afraid of the bright lights of fame and fortune. FantaPants is our SPF 1000 and is here to celebrate the pigmentally retarded among us. It's not just a token; it's a movement. So get the word out my fire crotched army and spread the Fizz!</p>
 					<div class="hero__action">
 						<div class="hero__join-us">Join the FantaPants revolution today</div>
 						<a href="#" class="hero__button button">Join the Fizz</a>
 					</div>
-					<h2 class="hero__title title"><span>Meet Sam</span></h2>
 					<div class="hero__body about-sam">
 						<div class="about-sam__content">
-							<p class="about-sam__text text">This is Sam. Sam is a lot older now. Sam lost a bet. Sam is now the face of the FantaPant movement.</p>
-							<h3 class="about-sam__subtitle subtitle">Please help us inflict maximum embarrassment for Sam</h3>
-							<button class="about-sam__button button" id="embarrass-button">Embarrass Sam</button>
-							<div id="phrase"></div>
+							<p class="about-sam__text text">This is Sam (Not his real name….actually it is) Sam is a lot older now. Sam lost a bet. Sam is now the face of the FantaPant movement.</p>
+							<a href="#" class="about-sam__button button">Join the Fizz</a>
 						</div>
 						<div class="about-sam__card">
 							<div class="about-sam__inner-card">
@@ -65,43 +63,33 @@
 					</div>
 				</div>
 			</section>
-			<!-- <section class="page__game game">
-						<div class="game__container">
-							<div class="game-container">
-								<div class="sun" id="sun"></div>
-								<div class="redhead" id="redhead"></div>
-								<div class="white-spot" id="white-spot"></div>
-								<div class="timer" id="timer">Time: 10</div>
-								<div class="cursor" id="cursor"></div>
-							</div>
-						</div>
-					</section> -->
+			<div id="game-container">
+				<div id="sun"></div>
+				<div id="character"></div>
+			</div>
 			<section class="page__famous famous" id="famous">
 				<div class="famous__container">
 					<h2 class="famous__title title">Famous FantaPants Who Embrace the Fizz!</h2>
-					<p class="famous__text text">The world is filled with famous FantaPants who’ve taken their fiery nature to new heights. From the big screen to politics and beyond, these FantaPants are making waves—and so can you.</p>
-					<div class="famous__items">
-						<div class="famous__item">
-							<div class="famous__img">
-								<img src="img/famous/prince_harry.webp" alt="Image">
-							</div>
-							<h3 class="famous__name">Prince Harry</h3>
-							<div class="famous__desc">Royalty with a rebellious twist.</div>
+					<p class="famous__text text">The world is filled with famous FantaPants who’ve embraced their Fanta to propel them to new heights. From the big screen to politics and beyond, these FantaPants are to be saluted</p>
+					<div class="slider-container">
+						<!-- Left side -->
+						<div class="side-block left">
+							<p id="left-text"></p>
+							<h3 id="left-author"></h3>
 						</div>
-						<div class="famous__item">
-							<div class="famous__img">
-								<img src="img/famous/lucille_ball.webp" alt="Image">
-							</div>
-							<h3 class="famous__name">Lucille Ball</h3>
-							<div class="famous__desc">Icon of comedy and style.</div>
+						<!-- Center -->
+						<div class="main-slide">
+							<img id="main-image" src="" alt="Celebrity">
 						</div>
-						<div class="famous__item">
-							<div class="famous__img">
-								<img src="img/famous/ed_sheeran.webp" alt="Image">
-							</div>
-							<h3 class="famous__name">Ed Sheeran</h3>
-							<div class="famous__desc">Singing his way through life with fiery locks.</div>
+						<!-- Right side -->
+						<div class="side-block right">
+							<blockquote id="right-quote"></blockquote>
 						</div>
+					</div>
+					<!-- Slider buttons -->
+					<div class="controls">
+						<button id="prev">⟵</button>
+						<button id="next">⟶</button>
 					</div>
 				</div>
 			</section>
@@ -233,7 +221,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241124231529"></script>
+	<script src="js/app.min.js?_v=20241125161922"></script>
 </body>
 
 </html>
