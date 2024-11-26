@@ -5,11 +5,27 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20241126020355">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241126193911">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<!-- Background images -->
+	<div class="floating orange">
+		<img src="img/background/orange_slice.webp" alt="Orange">
+	</div>
+	<div class="floating orange2">
+		<img src="img/background/oranges.webp" alt="Oranges">
+	</div>
+	<div class="flying-fairy">
+		<img src="img/background/fairy.webp" alt="Fairy">
+	</div>
+	<div class="static superhero">
+		<img src="img/background/superhero.webp" alt="Superhero">
+	</div>
+	<div class="static redhead">
+		<img src="img/background/redhead_with_fanta.webp" alt="Redhead with Fanta">
+	</div>
 	<div class="wrapper">
 		<header class="header" data-scroll="50">
 			<div class="header__running-text">
@@ -23,32 +39,57 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">The Way of the Fizz</a></li>
-							<li class="menu__item"><a href="#famous" class="menu__link">Famous FantaPants</a></li>
+							<li class="menu__item"><a href="#fizz-way" class="menu__link">The Way of the Fizz</a></li>
+							<li class="menu__item"><a href="#famous" class="menu__link">FantaPants Quiz</a></li>
 							<li class="menu__item"><a href="#did-you-know" class="menu__link">Did you Know</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Confessions of a Fanta</a></li>
+							<li class="menu__item"><a href="#story-generator" class="menu__link">FantaPant Story Generator</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div class="header__actions">
-					<a href="#" class="header__button button">Join the Fizz</a>
+					<a href="#" class="header__button button">
+						<span class="button__text">Join the Fizz</span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+					</a>
 					<button type="button" class="header__icon icon-menu"><span></span></button>
 				</div>
 			</div>
 		</header>
 		<main class="page">
+			<!-- Hero section -->
 			<section class="page__hero hero">
 				<div class="hero__container">
 					<h1 class="hero__title title"><span>#FantaPants – Embrace the Fizz</span></h1>
 					<p class="hero__intro-text">For too long, we've sat in the shade (literally) too afraid of the bright lights of fame and fortune. FantaPants is our SPF 1000 and is here to celebrate the pigmentally retarded among us. It's not just a token; it's a movement. So get the word out my fire crotched army and spread the Fizz!</p>
 					<div class="hero__action">
 						<div class="hero__join-us">Join the FantaPants revolution today</div>
-						<a href="#" class="hero__button button">Join the Fizz</a>
+						<a href="#" class="hero__button button">
+							<span class="button__text">Join the Fizz</span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+						</a>
 					</div>
 					<div class="hero__body about-sam">
 						<div class="about-sam__content">
 							<p class="about-sam__text text">This is Sam (Not his real name….actually it is) Sam is a lot older now. Sam lost a bet. Sam is now the face of the FantaPant movement.</p>
-							<a href="#" class="about-sam__button button">Join the Fizz</a>
+							<a href="#" class="about-sam__button button">
+								<span class="button__text">Join the Fizz</span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+							</a>
 						</div>
 						<div class="about-sam__card">
 							<div class="about-sam__inner-card">
@@ -63,13 +104,22 @@
 					</div>
 				</div>
 			</section>
+			<!-- Sponsor section -->
 			<section class="page__sponsor sponsor">
 				<div class="sponsor__container">
 					<div class="sponsor__item">
-						<h2 class="sponsor__subtitle subtitle"><span>Sponsor a FantaPant Today</span></h2>
+						<h2 class="sponsor__subtitle subtitle">Sponsor a FantaPant Today</h2>
 						<p class="sponsor__text text">For just one token a day, you can help a FantaPant survive the harsh realities of SPF 100 dependency, endless 'fire crotch' jokes, and the eternal hunt for shade.</p>
 						<p class="sponsor__text text">Your contribution can make a difference. Support a redhead today.</p>
-						<a href="#" class="sponsor__button button" id="donateButton">Donate to the Cause</a>
+						<a href="#" class="sponsor__button button" id="donateButton">
+							<span class="button__text">Donate to the Cause</span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+						</a>
 					</div>
 					<div class="sponsor__item">
 						<div class="sponsor__img">
@@ -79,39 +129,99 @@
 					</div>
 				</div>
 			</section>
+			<!-- Fizz Way section -->
+			<section class="page__fizz-way fizz-way" id="fizz-way">
+				<div class="fizz-way__container">
+					<h2 class="fizz-way__title title">Join The Way of the Fizz</h2>
+					<p class="fizz-way__text text">
+						Become a part of our exclusive society - <span>The Way of the Fizz</span>. An elite order of FantaPants (and supporters) who know how to embrace their fiery nature. The rules are simple: if you know, you know. The secret is in the fizz. But we can’t explain it to you… you have to experience it.
+					</p>
+					<div class="fizz-way__path">
+						<div class="fizz-way__step fizz-way__step--1 active">
+							<div class="fizz-way__img-step">
+								<img src="img/the_way_of_the_wizz/step_1.webp" alt="Step 1">
+							</div>
+							<button class="next-btn" data-next="2"><span>→</span></button>
+						</div>
+						<div class="fizz-way__step fizz-way__step--2">
+							<div class="fizz-way__img-step">
+								<img src="img/the_way_of_the_wizz/step_2.webp" alt="Step 2">
+							</div>
+							<button class="next-btn" data-next="3"><span>→</span></button>
+						</div>
+						<div class="fizz-way__step fizz-way__step--3">
+							<div class="fizz-way__img-step">
+								<img src="img/the_way_of_the_wizz/step_3.webp" alt="Step 3">
+							</div>
+							<button class="next-btn next-btn--ready"><span>→</span></button>
+						</div>
+						<div class="easter-egg hidden">
+							<p class="text">Now you know... but don't tell anyone!</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Game -->
 			<div id="game-container">
 				<div id="sun"></div>
 				<div id="character"></div>
 			</div>
+			<!-- Fanta Quiz section -->
 			<section class="page__famous famous" id="famous">
 				<div class="famous__container">
 					<h2 class="famous__title title">Famous FantaPants Who Embrace the Fizz!</h2>
 					<p class="famous__text text">The world is filled with famous FantaPants who’ve embraced their Fanta to propel them to new heights. From the big screen to politics and beyond, these FantaPants are to be saluted</p>
-					<div class="slider-container">
-						<!-- Left side -->
-						<div class="side-block left">
-							<p id="left-text"></p>
-							<h3 id="left-author"></h3>
+					<!-- <div class="slider-container">
+							<div class="side-block left">
+								<p id="left-text"></p>
+								<h3 id="left-author"></h3>
+							</div>
+							<div class="main-slide">
+								<img id="main-image" alt="Celebrity">
+							</div>
+							<div class="side-block right">
+								<blockquote id="right-quote"></blockquote>
+							</div>
 						</div>
-						<!-- Center -->
-						<div class="main-slide">
-							<img id="main-image" alt="Celebrity">
+						<div class="controls">
+							<button id="prev">⟵</button>
+							<button id="next">⟶</button>
+						</div> -->
+					<div class="famous__quiz quiz">
+						<div class="quiz__image">
+							<img id="fanta-image" src="#" alt="Famous Fanta">
 						</div>
-						<!-- Right side -->
-						<div class="side-block right">
-							<blockquote id="right-quote"></blockquote>
+						<div class="quiz__field">
+							<input type="text" id="answer" class="quiz__input" placeholder="Guess the name...">
+							<button id="hint-btn" class="quiz__button">Hint</button>
+							<button id="submit-btn" class="quiz__button quiz__button--submit">Submit</button>
 						</div>
-					</div>
-					<!-- Slider buttons -->
-					<div class="controls">
-						<button id="prev">⟵</button>
-						<button id="next">⟶</button>
+						<div class="quiz__result">
+							<p id="feedback" class="quiz__feedback"></p>
+							<p id="hint" class="quiz__hint"></p>
+						</div>
+						<div class="quiz__progress">
+							<p id="progress-text" class="quiz__count">0/11 Correct</p>
+						</div>
+						<div id="final-message" class="quiz__final" style="display: none;">
+							<p class="text">Did you enjoy the quiz? Join our community!</p>
+							<a href="#" id="join-btn" class="button">
+								<span class="button__text">Join the Fizz</span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+								<span class="button__bubble"></span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
+			<!-- Did You Know section -->
 			<section class="page__did-you-know did-you-know" id="did-you-know">
 				<div class="did-you-know__container">
-					<h2 class="did-you-know__title title"><span>Did You Know?</span></h2>
+					<h2 class="did-you-know__title title">Did You Know?</h2>
 					<h3 class="did-you-know__subtitle subtitle">FantaPants: Endangered, Freckled, and in Need of Your Support</h3>
 					<div class="did-you-know__facts">
 						<div class="did-you-know__fact-card">
@@ -187,7 +297,8 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__story-generator story-generator">
+			<!-- Story Generator section -->
+			<section class="page__story-generator story-generator" id="story-generator">
 				<div class="story-generator__container">
 					<h3 class="story-generator__title title">Story Generator</h3>
 					<p class="story-generator__text text">Tell the world your story from woes to wins….what’s is it actually like growing up Fanta. </p>
@@ -204,11 +315,19 @@
 							<label for="question3" class="form__label">How do you feel about being a FantaPant?</label>
 							<input type="text" id="question3" placeholder="Answer here..." class="form__input">
 						</div>
-						<div class="form__group">
+						<div class="form__group form__group--upload">
 							<label for="photo" class="form__upload-label">Upload your FantaPant photo</label>
 							<input type="file" id="photo" accept="image/*" class="form__upload">
 						</div>
-						<button type="button" id="generate-story" class="form__button button">Generate Story</button>
+						<button type="button" id="generate-story" class="form__button button">
+							<span class="button__text">Generate Story</span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+							<span class="button__bubble"></span>
+						</button>
 					</form>
 					<div id="story-preview" style="display:none;">
 						<h4>Your Story:</h4>
@@ -225,7 +344,15 @@
 				<h2 class="footer__title">Join the FantaPants movement today!</h2>
 				<div class="footer__body">
 					<!-- Call to Action -->
-					<a href="#join-fizz" class="footer__button button footer__button--join-us">Join the Fizz</a>
+					<a href="#join-fizz" class="footer__button button footer__button--join-us">
+						<span class="button__text">Join the Fizz</span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+					</a>
 					<!-- Social Media Links -->
 					<div class="footer__social-media social-media">
 						<a href="https://instagram.com" target="_blank" class="social-media__link">
@@ -260,14 +387,22 @@
 						</a>
 					</div>
 					<!-- Call to Action -->
-					<a href="#sponsor-fantapant" class="footer__button button">Sponsor a FantaPant</a>
+					<a href="#sponsor-fantapant" class="footer__button button">
+						<span class="button__text">Sponsor a FantaPant</span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+					</a>
 				</div>
 				<!-- Disclaimer -->
 				<p class="footer__disclaimer"><small>FantaPants is a movement, not a financial advice platform. Always do your own research before engaging with any crypto project.</small></p>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241126020355"></script>
+	<script src="js/app.min.js?_v=20241126193911"></script>
 </body>
 
 </html>
