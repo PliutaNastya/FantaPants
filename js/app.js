@@ -132,8 +132,8 @@
         console.log(`Splash created at: (${offsetX}, ${offsetY})`);
         const splash = document.createElement("div");
         splash.style.position = "absolute";
-        splash.style.width = "50px";
-        splash.style.height = "50px";
+        splash.style.width = "70px";
+        splash.style.height = "70px";
         splash.style.backgroundImage = "url('./img/game/splash.webp')";
         splash.style.backgroundSize = "contain";
         splash.style.backgroundRepeat = "no-repeat";
@@ -230,13 +230,6 @@
         updateSlide(currentSlide);
     }));
     updateSlide(currentSlide);
-    const burgerMenu = document.querySelector(".icon-menu");
-    burgerMenu.addEventListener("click", (() => {
-        cursor.style.display = "none";
-    }));
-    document.addEventListener("click", (e => {
-        if (!e.target.closest(".menu")) cursor.style.display = "block";
-    }));
     document.getElementById("story-form");
     const generateButton = document.getElementById("generate-story");
     const storyPreview = document.getElementById("story-preview");
@@ -261,6 +254,16 @@
             reader.readAsDataURL(photo);
         } else storyPhoto.innerHTML = "";
         storyPreview.style.display = "block";
+    }));
+    document.getElementById("donateButton").addEventListener("click", (function(event) {
+        event.preventDefault();
+        const image = document.getElementById("timmy");
+        if (image) image.src = "./img/sponsor_us/happy_timmy.webp";
+        const caption = document.getElementById("caption");
+        if (caption) caption.textContent = "Thanks to your support, Timmy is now safe with sunscreen!";
+        setTimeout((() => {
+            window.open("https://example.com/fantapants", "_blank");
+        }), 2e3);
     }));
     window["FLS"] = true;
     headerScroll();
