@@ -547,7 +547,7 @@ body {
   left: 0
 }
 .redhead {
-  bottom: -3%;
+  bottom: 0;
   right: 0
 }
 .header {
@@ -581,8 +581,8 @@ body {
   white-space: nowrap;
   -webkit-animation-name: running-text;
   animation-name: running-text;
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+  -webkit-animation-duration: 25s;
+  animation-duration: 25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -959,7 +959,7 @@ body {
   align-items: center;
   row-gap: 15px;
   text-align: center;
-  background: url(../img/famous/background_2.webp) 0 0/cover no-repeat;
+  background: url(../img/famous/background.webp) 0 0/cover no-repeat;
   background-attachment: fixed
 }
 .quiz__image {
@@ -1019,21 +1019,6 @@ body {
 .quiz__button:hover {
   -webkit-transform: translateY(1px);
   transform: translateY(1px)
-}
-.quiz__result {
-  color: #333
-}
-.quiz__feedback {
-  color: #333
-}
-.quiz__hint {
-  color: #333
-}
-.quiz__progress {
-  color: #333
-}
-.quiz__count {
-  color: #333
 }
 .quiz__final p:not(:last-child) {
   -webkit-margin-after: 15px;

@@ -142,9 +142,6 @@
         }), 3e3);
     }
     function createSplash(x, y) {
-        const rect = container.getBoundingClientRect();
-        const offsetX = x - rect.left;
-        const offsetY = y - rect.top;
         const splash = document.createElement("div");
         splash.style.position = "absolute";
         splash.style.width = "70px";
@@ -154,39 +151,30 @@
         splash.style.backgroundRepeat = "no-repeat";
         splash.style.borderRadius = "50%";
         splash.style.pointerEvents = "none";
-        splash.style.left = `${offsetX - 25}px`;
-        splash.style.top = `${offsetY - 25}px`;
+        splash.style.left = `${x - 35}px`;
+        splash.style.top = `${y - 35}px`;
         splash.style.zIndex = "9999";
-        container.appendChild(splash);
+        document.body.appendChild(splash);
         setTimeout((() => {
             splash.remove();
         }), 1e3);
     }
     document.addEventListener("mousedown", (e => {
-        const rect = container.getBoundingClientRect();
-        const offsetX = e.clientX - rect.left;
-        const offsetY = e.clientY - rect.top;
-        createSplash(offsetX, offsetY);
+        const x = e.pageX;
+        const y = e.pageY;
+        createSplash(x, y);
     }));
     document.addEventListener("mousemove", (e => {
         cursor.style.left = `${e.pageX}px`;
         cursor.style.top = `${e.pageY}px`;
     }));
-    document.addEventListener("mousedown", (e => {
-        cursor.style.left = `${e.pageX}px`;
-        cursor.style.top = `${e.pageY}px`;
-        createSplash(e.pageX, e.pageY);
-    }));
-    container.addEventListener("touchstart", (e => {
+    document.addEventListener("touchstart", (e => {
         const touch = e.touches[0];
         const touchX = touch.pageX;
         const touchY = touch.pageY;
-        const rect = container.getBoundingClientRect();
-        const offsetX = touchX - rect.left;
-        const offsetY = touchY - rect.top;
+        createSplash(touchX, touchY);
         cursor.style.left = `${touchX}px`;
         cursor.style.top = `${touchY}px`;
-        createSplash(offsetX, offsetY);
     }));
     character.addEventListener("click", (() => {
         character.style.backgroundImage = "url('./img/game/redhead_sunscreen.webp')";
@@ -384,7 +372,7 @@
         const caption = document.getElementById("caption");
         if (caption) caption.textContent = "Thanks to your support, Timmy is now safe with sunscreen!";
         setTimeout((() => {
-            window.open("https://example.com/fantapants", "_blank");
+            window.open("https://app.turbos.finance/#/trade?input=0x2::sui::SUI&output=0xb230169ffa466ea8b52bd11c2490d03a4aa7db42ec7d11743d88e366faf357a1::fantapants::FANTAPANTS", "_blank");
         }), 2e3);
     }));
     document.getElementById("photo").addEventListener("change", (function(event) {
