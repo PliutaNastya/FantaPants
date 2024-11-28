@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-	<title>FANTAPANTS</title>
+	<title>FantaPants</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="FantaPants, redhead community, embrace the fizz, redhead jokes, freckles, SPF 1000, redhead facts, redhead pride, freckled faces, support redheads, FantaPants movement, redhead empowerment, redhead humor, unique redhead traits, famous redheads, redhead society, freckle statistics">
 	<meta name="description" content="Join the FantaPants movement and support fiery redheads with a fun twist! Celebrate freckled pride, SPF 1000, and the redhead community through laughter, a thrilling quiz, interesting facts, and the exciting 'Catch the Redhead' game. Embrace the Fizz today and be part of this lively and empowering movement!">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/style.min.css?_v=20241128125047">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241128213645">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -47,22 +47,23 @@
 			<!-- Header container -->
 			<div class="header__container">
 				<!-- Header logo -->
-				<a href="" class="header__logo">LOGO</a>
+				<a href="" class="header__logo">
+					<img src="img/logo.webp" alt="Logotype">
+				</a>
 				<!-- Header menu -->
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" data-goto="#fizz-way" data-goto-header class="menu__link">The Way of the Fizz</a></li>
 							<li class="menu__item"><a href="#" data-goto="#famous" data-goto-header class="menu__link">FantaPants Quiz</a></li>
 							<li class="menu__item"><a href="#" data-goto="#did-you-know" data-goto-header class="menu__link">Did you Know</a></li>
-							<li class="menu__item"><a href="#" data-goto="#story-generator" data-goto-header class="menu__link">FantaPant Story Generator</a></li>
+							<li class="menu__item"><a href="#" data-goto="#story-generator" data-goto-header class="menu__link">Confessions of FantaPant</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div class="header__actions">
 					<!-- Header action button -->
 					<a href="https://app.turbos.finance/#/trade?input=0x2::sui::SUI&output=0xb230169ffa466ea8b52bd11c2490d03a4aa7db42ec7d11743d88e366faf357a1::fantapants::FANTAPANTS" class="header__button button" target="_blank">
-						<span class="button__text">Join the Fizz</span>
+						<span class="button__text">Join us</span>
 						<span class="button__bubble"></span>
 						<span class="button__bubble"></span>
 						<span class="button__bubble"></span>
@@ -70,11 +71,167 @@
 						<span class="button__bubble"></span>
 						<span class="button__bubble"></span>
 					</a>
+					<button data-popup="#popup" class="header__button button">
+						<span class="button__text">Guide</span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+						<span class="button__bubble"></span>
+					</button>
 					<!-- Header burger menu -->
-					<button type="button" class="header__icon icon-menu"><span></span></button>
+					<button type="button" aria-label="Burger menu icon" class="header__icon icon-menu"><span></span></button>
 				</div>
 			</div>
 		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#320051" stroke-linecap="square" />
+							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#320051" stroke-linecap="square" />
+						</svg>
+					</button>
+					<div class="popup__text guide">
+						<h2 class="guide__title">How to Purchase FantaPants Tokens:</h2>
+						<ol class="guide__steps">
+							<li class="guide__step">
+								<strong>Step 1: Download a SUI Wallet</strong>
+								<p class="guide__text">To get started, you’ll need to download a wallet that supports the <strong>SUI network</strong>.</p>
+								<ul>
+									<li><strong>Chrome Extension:</strong> <a href="https://chromewebstore.google.com/detail/sui-wallet/opcgpfmipidbgpenhmajoajpbobppdil?pli=1" target="_blank">Sui Wallet Chrome Extension</a></li>
+									<li><strong>Android:</strong> <a href="https://play.google.com/store/apps/details?id=com.mystenlabs.suiwallet&pli=1" target="_blank">Sui Wallet on Google Play</a></li>
+									<li><strong>iOS:</strong> <a href="https://apps.apple.com/us/app/sui-wallet-mobile/id6476572140" target="_blank">Sui wallet on the App Store</a></li>
+								</ul>
+								<p class="guide__text">After installing Sui, follow the instructions to set up your wallet.</p>
+							</li>
+							<li class="guide__step">
+								<strong>Step 2: Set Up Your SUI Wallet</strong>
+								<p class="guide__text">Once you’ve downloaded the SUI wallet, follow these steps to set it up:</p>
+								<ul>
+									<li><strong>Open the Wallet:</strong> Launch the wallet app/extension.</li>
+									<li><strong>Create a New Wallet:</strong> Choose the option to <strong>create a new wallet</strong>.</li>
+									<li><strong>Backup Your Seed Phrase:</strong> Make sure to securely <strong>store your seed phrase</strong>. It’s essential to keep it safe as it’s your only way to recover your wallet.</li>
+									<li><strong>Set Your Password:</strong> Set a strong password to secure your wallet.</li>
+								</ul>
+							</li>
+							<li class="guide__step">
+								<strong>Step 3: Fund Your SUI Wallet</strong>
+								<p class="guide__text">To interact with the <strong>SUI network</strong>, you need to fund your wallet with <strong>SUI tokens</strong> for transaction fees.</p>
+								<h3 class="guide__subtitle"><strong>Get SUI Tokens:</strong></h3>
+								<p class="guide__text">You can acquire <strong>SUI tokens</strong> in a few different ways:</p>
+								<ul>
+									<li>
+										<strong>Buy on a Centralized Exchange:</strong>
+										<p>You can purchase <strong>SUI tokens</strong> on exchanges like <strong>Coinspot</strong>, <strong>Binance</strong>, or <strong>KuCoin</strong>.</p>
+									</li>
+									<li>
+										<strong>Direct Transfer:</strong>
+										<p>If someone is sending you <strong>SUI tokens</strong>, simply provide them with your <strong>Sui wallet address</strong>.</p>
+									</li>
+								</ul>
+								<h3 class="guide__subtitle">Send SUI to Your SUI Wallet:</h3>
+								<ul>
+									<li>
+										<strong>Find Your Wallet Address:</strong>
+										<ul>
+											<li>Open your SUI wallet app, click on your wallet address, and <strong>copy</strong> it.</li>
+										</ul>
+									</li>
+									<li>
+										<strong>Send SUI from Exchange:</strong>
+										<ul>
+											<li>On <strong>Coinspot</strong> (or any other exchange where you bought SUI), go to <strong>"Send"</strong> and paste your <strong>SUI wallet address</strong>.</li>
+											<li>Choose the amount of <span>SUI tokens</span> you want to send, then confirm the transaction.</li>
+										</ul>
+									</li>
+									<li>
+										<strong>Wait for the Transfer:</strong>
+										<ul>
+											<li>After a few minutes, the <strong>SUI tokens</strong> will appear in your SUI wallet, and you’re ready to make your purchase.</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="guide__step">
+								<strong>Step 4: Connect Your Wallet to Turbos Finance</strong>
+								<p class="guide__text">Now that your wallet is funded with <strong>SUI tokens</strong>, it’s time to purchase <strong>FantaPants</strong>.</p>
+								<ul>
+									<li>
+										<strong>Go to Turbos Finance:</strong>
+										<ul>
+											<li>Visit <a href="https://app.turbos.finance/" target="_blank">Turbos Finance</a> in your browser.</li>
+										</ul>
+									</li>
+									<li>
+										<strong>Connect Your Wallet:</strong>
+										<ul>
+											<li>On the top right of the website, click <strong>"Connect Wallet"</strong> and select <strong>SUI wallet</strong>.</li>
+											<li>Follow the prompts to connect your <strong>SUI wallet</strong> to Turbos Finance.</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="guide__step">
+								<strong>Step 5: Swap SUI for FantaPants Tokens:</strong>
+								<ul>
+									<li>
+										<strong>Select the Amount:</strong>
+										<ul>
+											<li>Enter the number of <strong>SUI tokens</strong> you want to swap for <strong>FantaPants</strong>.</li>
+										</ul>
+									</li>
+									<li>
+										<strong>Click "Trade":</strong>
+										<ul>
+											<li>Once you’ve entered the amount, click <strong>“Trade”</strong> to initiate the transaction.</li>
+										</ul>
+									</li>
+									<li>
+										<strong>Confirm the Transaction:</strong>
+										<ul>
+											<li>Your SUI wallet will prompt you to confirm the transaction. Review the details and confirm it.</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="guide__images">
+								<div class="guide__image">
+									<img src="img/guide/1.webp" alt="Image">
+								</div>
+								<div class="guide__image">
+									<img src="img/guide/2.webp" alt="Image">
+								</div>
+								<div class="guide__image">
+									<img src="img/guide/3.webp" alt="Image">
+								</div>
+							</li>
+							<li class="guide__step">
+								<strong>Step 6: View Your FantaPants Tokens</strong>
+								<p class="guide__text">Once the transaction is complete:</p>
+								<ul>
+									<li>
+										<strong>Check Your Wallet:</strong>
+										<ul>
+											<li>Open your <strong>SUI wallet</strong>, and you’ll see your newly purchased <strong>FantaPants tokens</strong>.</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ol>
+						<h2 class="guide__title">Enjoy Your FantaPants!</h2>
+						<p class="text__guide">You now own F<strong>antaPants tokens</strong>! You can:</p>
+						<ul>
+							<li><strong>Hold them</strong> in your wallet.</li>
+							<li><strong>Trade them</strong> on exchanges.</li>
+							<li><strong>Join the Way of the Fizz</strong> and take part in the <strong>FantaPants</strong> community.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 		<main class="page">
 			<!-- Hero section -->
 			<section class="page__hero hero">
@@ -149,39 +306,6 @@
 					</div>
 				</div>
 			</section>
-			<!-- Fizz Way section -->
-			<section class="page__fizz-way fizz-way" id="fizz-way">
-				<div class="fizz-way__container">
-					<h2 class="fizz-way__title title">Join The Way of the Fizz</h2>
-					<p class="fizz-way__text text">
-						Become a part of our exclusive society - <span>The Way of the Fizz</span>. An elite order of FantaPants (and supporters) who know how to embrace their fiery nature. The rules are simple: if you know, you know. The secret is in the fizz. But we can’t explain it to you… you have to experience it.
-					</p>
-					<!-- "The Way of the Fizz" path  -->
-					<div class="fizz-way__path">
-						<div class="fizz-way__step fizz-way__step--1 active">
-							<div class="fizz-way__img-step">
-								<img src="img/the_way_of_the_wizz/step_1.webp" alt="Step 1">
-							</div>
-							<button class="next-btn" data-next="2"><span>→</span></button>
-						</div>
-						<div class="fizz-way__step fizz-way__step--2">
-							<div class="fizz-way__img-step">
-								<img src="img/the_way_of_the_wizz/step_2.webp" alt="Step 2">
-							</div>
-							<button class="next-btn" data-next="3"><span>→</span></button>
-						</div>
-						<div class="fizz-way__step fizz-way__step--3">
-							<div class="fizz-way__img-step">
-								<img src="img/the_way_of_the_wizz/step_3.webp" alt="Step 3">
-							</div>
-							<button class="next-btn next-btn--ready"><span>→</span></button>
-						</div>
-						<div class="easter-egg hidden">
-							<p class="text">Now you know... but don't tell anyone!</p>
-						</div>
-					</div>
-				</div>
-			</section>
 			<!-- Game -->
 			<div id="game-container">
 				<div id="sun"></div>
@@ -201,9 +325,9 @@
 						</div>
 						<!-- Quiz field -->
 						<div class="quiz__field">
-							<input type="text" id="answer" class="quiz__input" placeholder="Guess the name...">
+							<input type="text" id="answer" class="quiz__input" placeholder="Guess the Fanta...">
 							<button id="hint-btn" class="quiz__button">Hint</button>
-							<button id="submit-btn" class="quiz__button quiz__button--submit">Guess the Fanta</button>
+							<button id="submit-btn" class="quiz__button quiz__button--submit">Submit</button>
 						</div>
 						<!-- Quiz result -->
 						<div class="quiz__result">
@@ -321,33 +445,28 @@
 			<section class="page__story-generator story-generator" id="story-generator">
 				<div class="story-generator__container">
 					<!-- Content in "Story generator" section -->
-					<h3 class="story-generator__title title">Story Generator</h3>
-					<p class="story-generator__text text">Tell the world your story from woes to wins….what’s is it actually like growing up Fanta. </p>
+					<h3 class="story-generator__title title">Confessions of FantaPant</h3>
+					<p class="story-generator__text text">This is a safe place. Tell the world your story from woes to wins….what’s is it actually like growing up Fanta.</p>
 					<!-- Form -->
 					<form id="story-form" class="story-generator__form form">
 						<!-- Form question -->
 						<div class="form__group">
-							<label for="question1" class="form__label">When did you first realize you were a FantaPant?</label>
+							<label for="question1" class="form__label">Title you confession</label>
 							<input type="text" id="question1" placeholder="Answer here..." class="form__input">
 						</div>
 						<!-- Form question -->
 						<div class="form__group">
-							<label for="question2" class="form__label">What's the strangest thing people have said about your FantaPant status?</label>
+							<label for="question2" class="form__label">Your confession</label>
 							<input type="text" id="question2" placeholder="Answer here..." class="form__input">
-						</div>
-						<!-- Form question -->
-						<div class="form__group">
-							<label for="question3" class="form__label">How do you feel about being a FantaPant?</label>
-							<input type="text" id="question3" placeholder="Answer here..." class="form__input">
 						</div>
 						<!-- Form upload photo -->
 						<div class="form__group form__group--upload">
-							<label for="photo" class="form__upload-label">Upload your FantaPant photo</label>
+							<label for="photo" class="form__upload-label">Upload your FantaPant photo (optional)</label>
 							<input type="file" id="photo" accept="image/*" class="form__upload">
 						</div>
 						<!-- Form button -->
 						<button type="button" id="generate-story" class="form__button button">
-							<span class="button__text">Generate Story</span>
+							<span class="button__text">Generate Сonfession</span>
 							<span class="button__bubble"></span>
 							<span class="button__bubble"></span>
 							<span class="button__bubble"></span>
@@ -358,7 +477,7 @@
 					</form>
 					<!-- Story preview -->
 					<div id="story-preview" style="display:none;">
-						<h4>Your Story:</h4>
+						<h4 id="story-title">Your Story:</h4>
 						<p id="story-text"></p>
 						<div id="story-photo"></div>
 					</div>
@@ -383,7 +502,7 @@
 					</a>
 					<!-- Social Media Links -->
 					<div class="footer__social-media social-media">
-						<a href="https://instagram.com" target="_blank" class="social-media__link">
+						<a href="https://instagram.com" target="_blank" class="social-media__link" aria-label="Link to instagram">
 							<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
 								<g stroke-width="0"></g>
 								<g stroke-linecap="round" stroke-linejoin="round"></g>
@@ -393,7 +512,7 @@
 								</g>
 							</svg>
 						</a>
-						<a href="https://twitter.com" target="_blank" class="social-media__link">
+						<a href="https://x.com/WeareFantaPants" target="_blank" class="social-media__link" aria-label="Link to Twitter">
 							<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
 								<g stroke-width="0"></g>
 								<g stroke-linecap="round" stroke-linejoin="round"></g>
@@ -403,13 +522,24 @@
 								</g>
 							</svg>
 						</a>
-						<a href="https://discord.com" target="_blank" class="social-media__link">
+						<a href="https://discord.com" target="_blank" class="social-media__link" aria-label="Link to Discord">
 							<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
 								<g stroke-width="0"></g>
 								<g stroke-linecap="round" stroke-linejoin="round"></g>
 								<g>
 									<circle cx="512" cy="512" r="512" style="fill:#ff4500"></circle>
 									<path d="M689.43 349a422.21 422.21 0 0 0-104.22-32.32 1.58 1.58 0 0 0-1.68.79 294.11 294.11 0 0 0-13 26.66 389.78 389.78 0 0 0-117.05 0 269.75 269.75 0 0 0-13.18-26.66 1.64 1.64 0 0 0-1.68-.79A421 421 0 0 0 334.44 349a1.49 1.49 0 0 0-.69.59c-66.37 99.17-84.55 195.9-75.63 291.41a1.76 1.76 0 0 0 .67 1.2 424.58 424.58 0 0 0 127.85 64.63 1.66 1.66 0 0 0 1.8-.59 303.45 303.45 0 0 0 26.15-42.54 1.62 1.62 0 0 0-.89-2.25 279.6 279.6 0 0 1-39.94-19 1.64 1.64 0 0 1-.16-2.72c2.68-2 5.37-4.1 7.93-6.22a1.58 1.58 0 0 1 1.65-.22c83.79 38.26 174.51 38.26 257.31 0a1.58 1.58 0 0 1 1.68.2c2.56 2.11 5.25 4.23 8 6.24a1.64 1.64 0 0 1-.14 2.72 262.37 262.37 0 0 1-40 19 1.63 1.63 0 0 0-.87 2.28 340.72 340.72 0 0 0 26.13 42.52 1.62 1.62 0 0 0 1.8.61 423.17 423.17 0 0 0 128-64.63 1.64 1.64 0 0 0 .67-1.18c10.68-110.44-17.88-206.38-75.7-291.42a1.3 1.3 0 0 0-.63-.63zM427.09 582.85c-25.23 0-46-23.16-46-51.6s20.38-51.6 46-51.6c25.83 0 46.42 23.36 46 51.6.02 28.44-20.37 51.6-46 51.6zm170.13 0c-25.23 0-46-23.16-46-51.6s20.38-51.6 46-51.6c25.83 0 46.42 23.36 46 51.6.01 28.44-20.17 51.6-46 51.6z" style="fill:#fff"></path>
+								</g>
+							</svg>
+						</a>
+						<a href="https://www.tiktok.com/@wearefantapants" target="_blank" class="social-media__link" aria-label="Link to TikTok">
+							<svg fill="#ffffff" viewBox="-6 -6 36.00 36.00" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0">
+									<rect x="-6" y="-6" width="36.00" height="36.00" rx="18" fill="#ff4500" strokewidth="0"></rect>
+								</g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"></path>
 								</g>
 							</svg>
 						</a>
@@ -430,7 +560,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241128125047"></script>
+	<script src="js/app.min.js?_v=20241128213645"></script>
 </body>
 
 </html>
