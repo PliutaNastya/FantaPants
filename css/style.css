@@ -306,26 +306,6 @@ body {
     transform: translate(20px,20px)
   }
 }
-@-webkit-keyframes typewriter {
-  0% {
-    width: 0;
-    opacity: 0
-  }
-  100% {
-    width: 100%;
-    opacity: 1
-  }
-}
-@keyframes typewriter {
-  0% {
-    width: 0;
-    opacity: 0
-  }
-  100% {
-    width: 100%;
-    opacity: 1
-  }
-}
 @-webkit-keyframes move-bottom-arrow {
   0%,
   100% {
