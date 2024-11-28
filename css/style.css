@@ -664,6 +664,17 @@ body::after {
   bottom: 0;
   right: 0
 }
+.orangutan {
+  top: 5%
+}
+.orangutan--1 {
+  left: -9%
+}
+.orangutan--2 {
+  right: -9%;
+  -webkit-transform: scale(-1,1);
+  transform: scale(-1,1)
+}
 #preloader {
   position: fixed;
   top: 0;
@@ -764,13 +775,11 @@ body::after {
 }
 .header__logo {
   position: relative;
-  z-index: 55;
-  width: 40px;
-  aspect-ratio: 1
+  z-index: 55
 }
 .header__logo img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: contain;
   object-fit: contain
 }
@@ -780,6 +789,9 @@ body::after {
   gap: 10px;
   position: relative;
   z-index: 55
+}
+.header__button {
+  flex-shrink: 0
 }
 .menu__list {
   display: flex;
@@ -831,11 +843,28 @@ body::after {
 .footer__disclaimer {
   text-align: center
 }
+.page__sponsor {
+  padding-block: 40px
+}
 .hero__title {
   font-family: "Patrick Hand",sans-serif;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.5
+}
+.hero__title img {
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+.hero__title img:not(:last-child) {
+  -webkit-margin-after: 10px;
+  margin-block-end: 10px
+}
+.hero__title span {
+  display: block
 }
 .hero__intro-text {
   font-family: "Patrick Hand",sans-serif;
@@ -845,10 +874,6 @@ body::after {
   display: flex;
   align-items: center;
   flex-direction: column
-}
-.hero__action:not(:last-child) {
-  -webkit-margin-after: 30px;
-  margin-block-end: 30px
 }
 .hero__join-us {
   display: flex;
@@ -1264,6 +1289,30 @@ body::after {
     max-width: 350px
   }
 }
+@media (min-width:62.06125em) {
+  .orangutan--1 {
+    left: -8%
+  }
+  .orangutan--2 {
+    right: -8%
+  }
+}
+@media (min-width:87.5em) {
+  .orangutan--1 {
+    left: -6%
+  }
+  .orangutan--2 {
+    right: -6%
+  }
+}
+@media (min-width:112.5em) {
+  .orangutan--1 {
+    left: 0
+  }
+  .orangutan--2 {
+    right: 0
+  }
+}
 @media (min-width:75em) {
   .guide {
     font-size: 1.375rem
@@ -1293,8 +1342,14 @@ body::after {
   .static {
     width: 12.5rem
   }
+  .orangutan {
+    width: 18.75rem
+  }
   .header__container {
     gap: 1.25rem
+  }
+  .header__logo {
+    width: 8.125rem
   }
   .menu__list {
     -webkit-column-gap: 3.125rem;
@@ -1313,13 +1368,12 @@ body::after {
     margin-block-end: 1.875rem
   }
   .page__hero {
-    padding-block: 4.375rem
+    -webkit-padding-before: 5rem;
+    padding-block-start: 5rem
   }
-  .page__sponsor {
-    padding-block: 2.5rem
-  }
-  .page__fizz-way {
-    padding-block: 4.375rem
+  .page__hero {
+    -webkit-padding-after: 5rem;
+    padding-block-end: 5rem
   }
   .page__famous {
     padding-block: 4.375rem
@@ -1346,6 +1400,10 @@ body::after {
   }
   .hero__action {
     row-gap: 1.25rem
+  }
+  .hero__action:not(:last-child) {
+    -webkit-margin-after: 8.125rem;
+    margin-block-end: 8.125rem
   }
   .hero__body {
     gap: 3.125rem
@@ -1520,8 +1578,14 @@ body::after {
   .static {
     width: 6.25rem
   }
+  .orangutan {
+    width: 12.5rem
+  }
   .header__container {
-    gap: .625rem
+    gap: .3125rem
+  }
+  .header__logo {
+    width: 3.75rem
   }
   .footer {
     padding-block: 1.25rem
@@ -1535,13 +1599,12 @@ body::after {
     margin-block-end: .625rem
   }
   .page__hero {
-    padding-block: 2.5rem
+    -webkit-padding-before: 4.375rem;
+    padding-block-start: 4.375rem
   }
-  .page__sponsor {
-    padding-block: 1.25rem
-  }
-  .page__fizz-way {
-    padding-block: 2.5rem
+  .page__hero {
+    -webkit-padding-after: 3.125rem;
+    padding-block-end: 3.125rem
   }
   .page__famous {
     padding-block: 2.5rem
@@ -1568,6 +1631,10 @@ body::after {
   }
   .hero__action {
     row-gap: .9375rem
+  }
+  .hero__action:not(:last-child) {
+    -webkit-margin-after: 1.875rem;
+    margin-block-end: 1.875rem
   }
   .hero__body {
     gap: 1.875rem
@@ -1630,6 +1697,12 @@ body::after {
   }
 }
 @media (max-width:47.99875em) {
+  .orangutan--1 {
+    left: -10%
+  }
+  .orangutan--2 {
+    right: -10%
+  }
   .hero__body {
     flex-direction: column-reverse
   }
@@ -1641,6 +1714,22 @@ body::after {
   .footer__body {
     flex-direction: column;
     justify-content: center
+  }
+}
+@media (max-width:34.43625em) {
+  .orangutan--1 {
+    left: -15%
+  }
+  .orangutan--2 {
+    right: -15%
+  }
+}
+@media (max-width:25.06125em) {
+  .orangutan--1 {
+    left: -20%
+  }
+  .orangutan--2 {
+    right: -20%
   }
 }
 @media (max-width:25.37375em) {
@@ -1677,8 +1766,14 @@ body::after {
   .static {
     width: clamp(6.25rem ,3.9772727273rem + 11.3636363636vw ,12.5rem)
   }
+  .orangutan {
+    width: clamp(12.5rem ,10.2272727273rem + 11.3636363636vw ,18.75rem)
+  }
   .header__container {
-    gap: clamp(.625rem ,.3977272727rem + 1.1363636364vw ,1.25rem)
+    gap: clamp(.3125rem ,-.0284090909rem + 1.7045454545vw ,1.25rem)
+  }
+  .header__logo {
+    width: clamp(3.75rem ,2.1590909091rem + 7.9545454545vw ,8.125rem)
   }
   .footer {
     padding-block: clamp(1.25rem ,.5681818182rem + 3.4090909091vw ,3.125rem)
@@ -1692,13 +1787,12 @@ body::after {
     margin-block-end: clamp(.625rem ,.1704545455rem + 2.2727272727vw ,1.875rem)
   }
   .page__hero {
-    padding-block: clamp(2.5rem ,1.8181818182rem + 3.4090909091vw ,4.375rem)
+    -webkit-padding-before: clamp(4.375rem ,4.1477272727rem + 1.1363636364vw ,5rem);
+    padding-block-start: clamp(4.375rem ,4.1477272727rem + 1.1363636364vw ,5rem)
   }
-  .page__sponsor {
-    padding-block: clamp(1.25rem ,.7954545455rem + 2.2727272727vw ,2.5rem)
-  }
-  .page__fizz-way {
-    padding-block: clamp(2.5rem ,1.8181818182rem + 3.4090909091vw ,4.375rem)
+  .page__hero {
+    -webkit-padding-after: clamp(3.125rem ,2.4431818182rem + 3.4090909091vw ,5rem);
+    padding-block-end: clamp(3.125rem ,2.4431818182rem + 3.4090909091vw ,5rem)
   }
   .page__famous {
     padding-block: clamp(2.5rem ,1.8181818182rem + 3.4090909091vw ,4.375rem)
@@ -1725,6 +1819,10 @@ body::after {
   }
   .hero__action {
     row-gap: clamp(.9375rem ,.8238636364rem + .5681818182vw ,1.25rem)
+  }
+  .hero__action:not(:last-child) {
+    -webkit-margin-after: clamp(1.875rem ,-.3977272727rem + 11.3636363636vw ,8.125rem);
+    margin-block-end: clamp(1.875rem ,-.3977272727rem + 11.3636363636vw ,8.125rem)
   }
   .hero__body {
     gap: clamp(1.875rem ,1.4204545455rem + 2.2727272727vw ,3.125rem)
