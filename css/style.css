@@ -1017,7 +1017,7 @@ body::after {
   align-items: center;
   row-gap: 15px;
   text-align: center;
-  background: url(../img/famous/background.webp) center/contain no-repeat;
+  background: url(../img/famous/background.webp) center/cover no-repeat;
   background-attachment: fixed
 }
 .quiz__image {
@@ -1026,7 +1026,7 @@ body::after {
   aspect-ratio: 1;
   border-radius: 8px;
   overflow: hidden;
-  border: 3px solid #3b7a00
+  border: 3px solid #a42600
 }
 .quiz__image img {
   width: 100%;
@@ -1045,21 +1045,21 @@ body::after {
   border-radius: 8px;
   padding: 10px;
   background-color: #fff;
-  border: 3px solid #3b7a00;
+  border: 3px solid #a42600;
   outline: 0;
-  color: #3b7a00
+  color: #a42600
 }
 .quiz__input::-webkit-input-placeholder {
-  color: #3b7a00
+  color: #a42600
 }
 .quiz__input:-ms-input-placeholder {
-  color: #3b7a00
+  color: #a42600
 }
 .quiz__input::-ms-input-placeholder {
-  color: #3b7a00
+  color: #a42600
 }
 .quiz__input::placeholder {
-  color: #3b7a00
+  color: #a42600
 }
 .quiz__button {
   border-radius: 8px;
